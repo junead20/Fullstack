@@ -41,6 +41,44 @@
             margin-top: 8px;
             font-weight: bold;
         }
+        .registration-form {
+            max-width: 600px;
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+
+        .registration-form label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        .registration-form input,
+        .registration-form select,
+        .registration-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .registration-form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #confirmationMessage {
+            display: block;
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -124,16 +162,60 @@
                             class="event-image">
                         <p class="event-caption">Music Night</p>
                     </td>
-
-                    <td>
-                        <img src="images/event6.jpg"
-                            alt="Charity Fundraising Event"
-                            title="Charity Fundraising Event"
-                            class="event-image">
-                        <p class="event-caption">Charity Fundraiser</p>
-                    </td>
                 </tr>
             </table>
+        </section>
+        <section id="registration">
+            <h2>Event Registration</h2>
+
+            <form class="registration-form" onsubmit="registerEvent(event)">
+
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                    autofocus>
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+
+                <label for="eventDate">Event Date</label>
+                <input
+                    type="date"
+                    id="eventDate"
+                    name="eventDate"
+                    required>
+
+                <label for="eventType">Event Type</label>
+                <select id="eventType" name="eventType" required>
+                    <option value="">Select an Event</option>
+                    <option value="Food Festival">Food Festival</option>
+                    <option value="Marathon">Marathon</option>
+                    <option value="Music Night">Music Night</option>
+                    <option value="Tree Plantation">Tree Plantation</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Enter your message"
+                    required></textarea>
+
+                <button type="submit">Register</button>
+
+                <output id="confirmationMessage"></output>
+
+            </form>
         </section>
 
         <section id="contact">
@@ -147,6 +229,14 @@
     <footer>
         <p>&copy; 2026 Local Community Event Portal</p>
     </footer>
+    <script>
+        function registerEvent(event) {
+            event.preventDefault();
+
+            document.getElementById("confirmationMessage").value =
+                "Registration submitted successfully!";
+        }
+    </script>
 
 </body>
 </html>
