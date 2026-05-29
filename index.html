@@ -21,6 +21,26 @@
             padding: 3px 6px;
             border-radius: 3px;
         }
+        .gallery-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .gallery-table td {
+            text-align: center;
+            padding: 10px;
+        }
+        .event-image {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border: 3px solid #0d6efd;
+            border-radius: 5px;
+        }
+        .event-caption {
+            margin-top: 8px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -59,8 +79,61 @@
         </section>
 
         <section id="events">
-            <h2>Upcoming Events</h2>
-            <p>Browse upcoming community events and register online.</p>
+            <h2>Community Event Gallery</h2>
+
+            <table class="gallery-table">
+                <tr>
+                    <td>
+                        <img src="images/event1.jpg"
+                            alt="Community Food Festival"
+                            title="Night Dance Party"
+                            class="event-image">
+                        <p class="event-caption">Night Dance Party</p>
+                    </td>
+
+                    <td>
+                        <img src="images/event2.jpg"
+                            alt="City Marathon"
+                            title="Food Festival 2025"
+                            class="event-image">
+                        <p class="event-caption">Food Festival 2025</p>
+                    </td>
+
+                    <td>
+                        <img src="images/event3.jpg"
+                            alt="Tree Plantation Drive"
+                            title="Tree Plantation Drive"
+                            class="event-image">
+                        <p class="event-caption">Tree Plantation Drive</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/event4.jpg"
+                            alt="Cultural Festival"
+                            title="Seminars and Workshops"
+                            class="event-image">
+                        <p class="event-caption">Seminars and Workshops</p>
+                    </td>
+
+                    <td>
+                        <img src="images/event5.jpg"
+                            alt="Community Music Night"
+                            title="Community Music Night"
+                            class="event-image">
+                        <p class="event-caption">Music Night</p>
+                    </td>
+
+                    <td>
+                        <img src="images/event6.jpg"
+                            alt="Charity Fundraising Event"
+                            title="Charity Fundraising Event"
+                            class="event-image">
+                        <p class="event-caption">Charity Fundraiser</p>
+                    </td>
+                </tr>
+            </table>
         </section>
 
         <section id="contact">
