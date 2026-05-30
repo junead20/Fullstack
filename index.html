@@ -273,6 +273,22 @@
 
             </form>
         </section>
+        <section id="videoInvite">
+            <h2>Community Event Promo</h2>
+
+            <video
+                id="promoVideo"
+                width="500"
+                controls
+                oncanplay="videoReady()">
+
+                <source src="videos/community-event.mp4" type="video/mp4">
+
+                Your browser does not support HTML5 video.
+            </video>
+
+            <p id="videoStatus"></p>
+        </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
@@ -319,7 +335,10 @@
                     ? `Event Fee: ${fees[selectedEvent]}`
                     : "";
         }
-
+        function videoReady() {
+            document.getElementById("videoStatus").textContent =
+                "Video ready to play.";
+        }
         function countCharacters() {
             const message =
                 document.getElementById("message").value;
@@ -344,6 +363,15 @@
             ).value =
                 "Registration submitted successfully!";
         }
+        window.onbeforeunload = function () {
+
+            const name =
+                document.getElementById("name").value;
+
+            if (name !== "") {
+                return "Your registration form is not completed. Are you sure you want to leave?";
+            }
+        };
     </script>
 
 </body>
