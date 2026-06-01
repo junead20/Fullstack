@@ -1,0 +1,75 @@
+/* =========================
+   Global Styles
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   Header Styles
+========================= */
+
+header {
+    padding: 20px;
+}
+
+/* =========================
+   CTA Button Styles
+========================= */
+
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+}
+/* Universal Selector */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Element Selector */
+h2{
+    color:navy;
+}
+
+/* ID Selector */
+#mainHeader{
+    background-color:#004080;
+    color:white;
+}
+
+/* Class Selector */
+.eventCard{
+    border:1px solid #ccc;
+    padding:20px;
+}
+
+/* Group Selector */
+h3,p{
+    font-family:Verdana;
+}
+body{
+    background:
+    rgba(255,255,255,0.9)
+    url("images/bg.jpg");
+    background-size:cover;
+}
+
+/* Section Header */
+
+section h2{
+    background:linear-gradient(
+        to right,
+        #007BFF,
+        #00C6FF
+    );
+
+    color:white;
+    padding:10px;
+}
+
+.eventCard{
+    background-color:rgba(0,123,255,0.1);
+}
