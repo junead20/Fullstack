@@ -371,3 +371,9 @@ footer{
    STEP 11 : DEVTOOLS TESTING
    (No CSS Required)
 ================================================== */
+#videoInvite iframe{
+    width:100%;
+    max-width:700px;
+    height:400px;
+    border-radius:10px;
+}
