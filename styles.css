@@ -1,183 +1,315 @@
-/* =========================
-   Global Styles
-========================= */
+/* ===================================
+   1. Global Styles
+=================================== */
 
-body {
-    font-family: Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* =========================
-   Header Styles
-========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4 url("images/bg.jpg");
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+}
 
-header {
+/* ===================================
+   2. Header Styles
+=================================== */
+
+#mainHeader {
+    background-color: #004080;
+    color: white;
+    text-align: center;
     padding: 20px;
 }
 
-/* =========================
-   CTA Button Styles
-========================= */
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
 
-.cta-button {
+/* ===================================
+   3. Navigation Styles
+=================================== */
+
+nav {
     background-color: #007BFF;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+nav li {
+    padding: 5px;
+}
+
+nav a:link {
     color: white;
-}
-/* Universal Selector */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    text-decoration: none;
 }
 
-/* Element Selector */
-h2{
-    color:navy;
+nav a:hover {
+    color: yellow;
 }
 
-/* ID Selector */
-#mainHeader{
-    background-color:#004080;
-    color:white;
+nav a:active {
+    color: red;
 }
 
-/* Class Selector */
-.eventCard{
-    border:1px solid #ccc;
-    padding:20px;
+nav a:visited {
+    color: #e0e0e0;
 }
 
-/* Group Selector */
-h3,p{
-    font-family:Verdana;
-}
-body{
-    background:
-    rgba(255,255,255,0.9)
-    url("images/bg.jpg");
-    background-size:cover;
+/* ===================================
+   4. Welcome Banner
+=================================== */
+
+#welcomeBanner {
+    background: rgba(13, 110, 253, 0.9);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
 }
 
-/* Section Header */
+/* ===================================
+   5. Headings
+=================================== */
 
-section h2{
-    background:linear-gradient(
+h2 {
+    color: navy;
+    margin-bottom: 15px;
+}
+
+section h2 {
+    background: linear-gradient(
         to right,
         #007BFF,
         #00C6FF
     );
-
-    color:white;
-    padding:10px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.eventCard{
-    background-color:rgba(0,123,255,0.1);
-}
-body{
-    font-family:'Poppins',sans-serif;
+/* ===================================
+   6. Paragraphs and Text
+=================================== */
+
+h3,
+p {
+    font-family: Verdana, sans-serif;
 }
 
-h1{
-    font-size:40px;
-    font-weight:600;
+.event-description {
+    text-align: justify;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 1.8;
 }
 
-.event-description{
-    text-align:justify;
-    text-transform:capitalize;
-    letter-spacing:1px;
-    line-height:1.8;
-}
-a:link{
-    color:blue;
+/* ===================================
+   7. Event Card
+=================================== */
+
+.eventCard {
+    background-color: rgba(0, 123, 255, 0.1);
+    border: 2px solid #007BFF;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
 }
 
-a:hover{
-    color:red;
+/* ===================================
+   8. Gallery Images
+=================================== */
+
+.gallery-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-a:active{
-    color:green;
+.gallery-table td {
+    text-align: center;
+    padding: 10px;
 }
 
-a:visited{
-    color:purple;
+.event-image {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid #007BFF;
+    border-radius: 5px;
 }
 
-/* Navigation */
-
-nav ul{
-    list-style:none;
+.event-caption {
+    margin-top: 8px;
+    font-weight: bold;
 }
 
-nav li{
-    display:inline-block;
-    margin:10px;
-    padding:5px;
-}
-table{
-    width:100%;
-    border-collapse:collapse;
+.enlarged {
+    transform: scale(1.3);
+    transition: 0.3s ease;
 }
 
-th,td{
-    border:1px solid #ddd;
-    padding:10px;
-    text-align:center;
+/* ===================================
+   9. Table Styling
+=================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-tr:nth-child(even){
-    background-color:#f2f2f2;
-}
-.eventCard{
-    border:2px solid #007BFF;
-    padding:20px;
-    margin:20px;
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
 }
 
-input:focus{
-    outline:3px solid orange;
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-.hidden{
-    visibility:hidden;
+/* ===================================
+   10. Registration Form
+=================================== */
+
+.registration-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
 }
 
-.none{
-    display:none;
-}
-.hidden{
-    visibility:hidden;
+.registration-form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
 }
 
-.none{
-    display:none;
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
-.newsArticle{
-    column-count:2;
-    column-gap:30px;
-    column-rule:1px solid gray;
-}
-nav ul{
-    display:flex;
-    gap:20px;
-}
-@media screen and (max-width:768px){
 
-    nav ul{
-        flex-direction:column;
+.registration-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.registration-form button:hover {
+    background-color: #0056b3;
+}
+
+/* ===================================
+   11. Form Feedback
+=================================== */
+
+input:focus {
+    outline: 3px solid orange;
+}
+
+.error-message {
+    color: red;
+}
+
+.fee-display {
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.char-counter {
+    color: #555;
+}
+
+/* ===================================
+   12. Visibility Demo
+=================================== */
+
+.hidden {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}
+
+/* ===================================
+   13. Multi Column Layout
+=================================== */
+
+.newsArticle {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    margin: 20px;
+}
+
+.newsArticle h2 {
+    column-span: all;
+}
+
+/* ===================================
+   14. Footer
+=================================== */
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* ===================================
+   15. Responsive Design
+=================================== */
+
+@media screen and (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    img{
-        width:100%;
-        height:auto;
+    .event-image {
+        width: 100%;
+        height: auto;
     }
 
-    body{
-        font-size:14px;
+    body {
+        font-size: 14px;
     }
 
-    .eventCard{
-        width:90%;
+    .eventCard {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    video {
+        width: 100%;
     }
 }
