@@ -73,3 +73,45 @@ section h2{
 .eventCard{
     background-color:rgba(0,123,255,0.1);
 }
+body{
+    font-family:'Poppins',sans-serif;
+}
+
+h1{
+    font-size:40px;
+    font-weight:600;
+}
+
+.event-description{
+    text-align:justify;
+    text-transform:capitalize;
+    letter-spacing:1px;
+    line-height:1.8;
+}
+a:link{
+    color:blue;
+}
+
+a:hover{
+    color:red;
+}
+
+a:active{
+    color:green;
+}
+
+a:visited{
+    color:purple;
+}
+
+/* Navigation */
+
+nav ul{
+    list-style:none;
+}
+
+nav li{
+    display:inline-block;
+    margin:10px;
+    padding:5px;
+}
