@@ -158,3 +158,26 @@ input:focus{
     column-gap:30px;
     column-rule:1px solid gray;
 }
+nav ul{
+    display:flex;
+    gap:20px;
+}
+@media screen and (max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+    }
+
+    img{
+        width:100%;
+        height:auto;
+    }
+
+    body{
+        font-size:14px;
+    }
+
+    .eventCard{
+        width:90%;
+    }
+}
