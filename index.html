@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Internal CSS Requirement -->
+    <!-- Internal CSS -->
     <style>
         body{
             background-color:#f4f4f4;
         }
     </style>
-
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
 
@@ -21,74 +18,94 @@
 </head>
 <body>
 
-    <header id="mainHeader">
-        <h1>Local Community Event Portal</h1>
-    </header>
-
+    
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#events">Events</a></li>
-            <li><a href="#registration">Registration</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="help.html" target="_blank">Help</a></li>
         </ul>
     </nav>
 
+    <!-- Main -->
     <main>
-
         <div id="welcomeBanner">
             <h2>Welcome Back, Resident!</h2>
-            <p>Stay updated with local activities and community programs.</p>
-
-            <!-- Inline Style Requirement -->
-            <h3 style="color:red;">Special Community Announcement</h3>
-
             <p>
-                Early event registration is now open for all residents.
+                Stay updated with local activities and community programs.
+            </p>
+            <p>
+                <span style="color: red; font-weight: bold;">
+                    Special Offer: Early event registration is now open!
+                </span>
             </p>
         </div>
-
         <section id="home">
-            <h2>About the Portal</h2>
-
-            <p class="event-description">
-                Welcome to the community portal where residents can register
-                for local events and stay informed about community activities.
+            
+            <p>
+                Welcome to the community portal where residents can register for
+                <span class="highlight">local events</span>
+                and stay informed about
+                <span class="highlight">community activities</span>.
             </p>
         </section>
 
         <section id="events">
             <h2>Community Event Gallery</h2>
-
             <div class="eventCard">
                 <h3>Food Festival 2026</h3>
-                <p>
-                    Join us for delicious local cuisine and cultural activities.
-                </p>
+                <p>Join us for delicious local cuisine and cultural activities.</p>
             </div>
-
             <table class="gallery-table">
                 <tr>
                     <td>
-                        <img src="images/event1.jpg"
-                             alt="Night Dance Party"
-                             class="event-image">
+                        <img
+                            src="images/event1.jpg"
+                            alt="Night Dance Party"
+                            title="Night Dance Party"
+                            class="event-image"
+                            ondblclick="enlargeImage(this)">
                         <p class="event-caption">Night Dance Party</p>
                     </td>
 
                     <td>
                         <img src="images/event2.jpg"
-                             alt="Food Festival"
-                             class="event-image">
+                            alt="Food Festival"
+                            title="Food Festival"
+                            class="event-image"
+                            ondblclick="enlargeImage(this)">
                         <p class="event-caption">Food Festival</p>
                     </td>
 
                     <td>
                         <img src="images/event3.jpg"
-                             alt="Tree Plantation"
-                             class="event-image">
+                            alt="Tree Plantation Drive"
+                            title="Tree Plantation Drive"
+                            class="event-image"
+                            ondblclick="enlargeImage(this)">
                         <p class="event-caption">Tree Plantation Drive</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/event4.jpg"
+                            alt="Seminars and Workshops"
+                            title="Seminars and Workshops"
+                            class="event-image"
+                            ondblclick="enlargeImage(this)">
+                        <p class="event-caption">Seminars and Workshops</p>
+                    </td>
+
+                    <td>
+                        <img src="images/event5.jpg"
+                            alt="Community Music Night"
+                            title="Community Music Night"
+                            class="event-image"
+                            ondblclick="enlargeImage(this)">
+                        <p class="event-caption">Music Night</p>
                     </td>
                 </tr>
             </table>
@@ -98,66 +115,129 @@
             <h2>Community Bulletin</h2>
 
             <p>
-                The local council is pleased to announce several upcoming
-                community initiatives, including tree plantation drives,
-                cultural festivals, health awareness programs, educational
-                workshops, and volunteer opportunities. Residents are
-                encouraged to participate actively and help strengthen the
-                community through engagement and collaboration.
+                The local council is pleased to announce several upcoming community
+                initiatives, including tree plantation drives, cultural festivals,
+                health awareness programs, and educational workshops. Residents are
+                encouraged to participate actively and contribute to making the
+                neighborhood cleaner, greener, and more connected. Volunteers are
+                welcome to join planning committees and help organize future events.
+                Regular updates will be shared through the portal and community notice
+                boards. Stay engaged and help build a stronger community for everyone.
             </p>
         </section>
 
         <section id="registration">
             <h2>Event Registration</h2>
 
-            <form class="registration-form">
+            <form class="registration-form" onsubmit="registerEvent(event)">
 
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your full name">
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                    autofocus>
 
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Enter your email">
-
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="Enter phone number">
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter 10-digit phone number"
+                    onblur="validatePhone()"
+                    required>
+
+                <span id="phoneError" class="error-message"></span>
 
                 <label for="eventDate">Event Date</label>
-                <input type="date" id="eventDate">
+                <input
+                    type="date"
+                    id="eventDate"
+                    name="eventDate"
+                    required>
 
                 <label for="eventType">Event Type</label>
-                <select id="eventType">
-                    <option>Select an Event</option>
-                    <option>Food Festival</option>
-                    <option>Music Night</option>
-                    <option>Tree Plantation</option>
-                    <option>Workshop</option>
+
+                <select
+                    id="eventType"
+                    name="eventType"
+                    onchange="displayFee()"
+                    required>
+
+                    <option value="">Select an Event</option>
+                    <option value="Food Festival">Food Festival</option>
+                    <option value="Marathon">Seminars and Workshops</option>
+                    <option value="Music Night">Music Night</option>
+                    <option value="Tree Plantation">Tree Plantation</option>
+
                 </select>
 
-                <label for="message">Message</label>
-                <textarea id="message" rows="5"></textarea>
+                <p id="eventFee" class="fee-display"></p>
 
-                <button type="submit" class="cta-button">
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Enter your message"
+                    onkeyup="countCharacters()"
+                    required></textarea>
+
+                <p id="charCount" class="char-counter">
+                    Characters: 0
+                </p>
+
+                <button
+                    type="submit"
+                    onclick="showConfirmation()">
                     Register
                 </button>
+
+                <output id="confirmationMessage"></output>
+
             </form>
         </section>
-
         <section id="videoInvite">
             <h2>Community Event Promo</h2>
 
-            <video width="500" controls>
+            <video
+                id="promoVideo"
+                width="500"
+                controls
+                oncanplay="videoReady()">
+
                 <source src="videos/community-event.mp4" type="video/mp4">
+
                 Your browser does not support HTML5 video.
             </video>
+
+            <p id="videoStatus"></p>
         </section>
 
         <section id="visibilityDemo">
             <h2>Visibility Demo</h2>
 
-            <p class="hidden">Visibility Hidden Example</p>
-            <p class="none">Display None Example</p>
+            <p class="hidden">
+                Visibility Hidden Example
+            </p>
 
-            <p>This paragraph shows the layout difference.</p>
+            <p class="none">
+                Display None Example
+            </p>
+
+            <p>
+                This paragraph helps show the layout difference.
+            </p>
         </section>
 
         <section id="contact">
@@ -167,9 +247,82 @@
 
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Local Community Event Portal</p>
     </footer>
+    <script>
+        function validatePhone() {
+            const phone = document.getElementById("phone").value;
+            const error = document.getElementById("phoneError");
+
+            const phonePattern = /^[0-9]{10}$/;
+
+            if (!phonePattern.test(phone)) {
+                error.textContent =
+                    "Please enter a valid 10-digit phone number.";
+            } else {
+                error.textContent = "";
+            }
+        }
+
+        function displayFee() {
+            const selectedEvent =
+                document.getElementById("eventType").value;
+
+            const feeDisplay =
+                document.getElementById("eventFee");
+
+            const fees = {
+                "Food Festival": "₹100",
+                "Marathon": "₹250",
+                "Music Night": "₹150",
+                "Tree Plantation": "Free"
+            };
+
+            feeDisplay.textContent =
+                selectedEvent
+                    ? `Event Fee: ${fees[selectedEvent]}`
+                    : "";
+        }
+        function videoReady() {
+            document.getElementById("videoStatus").textContent =
+                "Video ready to play.";
+        }
+        function countCharacters() {
+            const message =
+                document.getElementById("message").value;
+
+            document.getElementById("charCount").textContent =
+                `Characters: ${message.length}`;
+        }
+
+        function enlargeImage(image) {
+            image.classList.toggle("enlarged");
+        }
+
+        function showConfirmation() {
+            console.log("Registration button clicked.");
+        }
+
+        function registerEvent(event) {
+            event.preventDefault();
+
+            document.getElementById(
+                "confirmationMessage"
+            ).value =
+                "Registration submitted successfully!";
+        }
+        window.onbeforeunload = function () {
+
+            const name =
+                document.getElementById("name").value;
+
+            if (name !== "") {
+                return "Your registration form is not completed. Are you sure you want to leave?";
+            }
+        };
+    </script>
 
 </body>
 </html>
