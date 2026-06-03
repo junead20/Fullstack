@@ -1,0 +1,9 @@
+@use "variables" as vars;
+@use "bootstrap/scss/bootstrap" with (
+  $primary: vars.$primary,
+  $border-radius: vars.$border-radius,
+);
+
+body {
+  background-color: #f8f9fa;
+}

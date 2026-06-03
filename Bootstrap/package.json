@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap-sass-project",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.83.1"
+  },
+  "scripts": {
+    "build:sass": "sass --load-path=node_modules src/scss:css --no-source-map",
+    "watch:sass": "sass --load-path=node_modules --watch src/scss:css --no-source-map",
+    "start": "npm run build:sass"
+  }
+}

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Exercises Showcase</title>
+
+    <!-- Compiled Bootstrap Sass CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Bootstrap 5 Exercises Showcase</h1>
+        <p class="lead">Bootstrap 5 Components Demo</p>
+    </header>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-bootstrap"></i> MyWebsite
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#grid">Grid</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Components
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#form">Form</a></li>
+                            <li><a class="dropdown-item" href="#buttons">Buttons</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+
+        <h2 class="mb-4">
+            Responsive Navbar Components
+        </h2>
+
+        <p class="text-muted">
+            The navbar above demonstrates Bootstrap's responsive navbar with:
+        </p>
+
+        <ul>
+            <li><strong>Logo/Brand</strong> - Displays your brand name with icon</li>
+            <li><strong>Toggler Button</strong> - Hamburger menu for mobile devices</li>
+            <li><strong>Navigation Links</strong> - Home, Grid, Components, Contact</li>
+            <li><strong>Dropdown Menu</strong> - Components dropdown with submenu items</li>
+            <li><strong>Search Form</strong> - Search input with button on the right</li>
+            <li><strong>Responsive Layout</strong> - Collapses on mobile, expands on larger screens</li>
+        </ul>
+
+    </section>
+
+    <section class="container py-5" id="grid">
+
+        <h2 class="mb-4">
+            Responsive Grid
+        </h2>
+
+        <div class="row g-3 justify-content-center align-items-center">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-primary text-white p-4">
+                    Column 1
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-success text-white p-4">
+                    Column 2
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-danger text-white p-4">
+                    Column 3
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="container py-5">
+
+        <h2 class="mb-4">
+            Sidebar Layout
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-3 bg-light p-4">
+                Sidebar
+            </div>
+
+            <div class="col-md-9 bg-info text-white p-4">
+                Main Content Area
+            </div>
+
+        </div>
+
+    </section>
+    <section class="container py-5">
+        <h2 class="mb-4">
+            Four column layout
+        </h2>
+        <div class="row g-3">
+
+            <div class="col-6 col-md-3">
+                <div class="bg-secondary text-white p-4">
+                    Column 1
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="bg-success text-white p-4">
+                    Column 2
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="bg-danger text-white p-4">
+                    Column 3
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="bg-info text-white p-4">
+                    Column 4
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="container py-5" id="form">
+
+        <h2 class="mb-4">
+            Registration Form
+        </h2>
+
+        <form>
+
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <div class="input-group">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" id="username" placeholder="Username">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country">
+                    <option selected disabled>Select a country</option>
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option>Canada</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="bio" class="form-label">Bio</label>
+                <textarea class="form-control" id="bio" rows="3" placeholder="Tell us about yourself"></textarea>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="terms">
+                <label class="form-check-label" for="terms">
+                    I accept the Terms and Conditions
+                </label>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="newsletter">
+                <label class="form-check-label" for="newsletter">
+                    Subscribe to our newsletter
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-success">
+                Register
+            </button>
+            <button type="reset" class="btn btn-secondary ms-2">
+                Clear
+            </button>
+
+        </form>
+
+    </section>
+    <section class="container py-5">
+
+        <h2 class="mb-4">
+            Profile Cards
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Card 1: Basic Profile Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='250'%3E%3Crect fill='%23007bff' width='100%25' height='100%25'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='48' font-weight='bold'%3EJU%3C/text%3E%3C/svg%3E"
+                        class="card-img-top" alt="Junead Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">Junead</h5>
+                        <p class="card-text text-muted">Frontend Developer</p>
+                        <p class="card-text small">
+                            Passionate about building beautiful and responsive web applications.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-top">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-sm btn-outline-dark" title="Twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-dark" title="LinkedIn"><i
+                                    class="bi bi-linkedin"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-dark" title="Portfolio"><i
+                                    class="bi bi-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Developer Card with Skills -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='250'%3E%3Crect fill='%2328a745' width='100%25' height='100%25'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='48' font-weight='bold'%3ESM%3C/text%3E%3C/svg%3E"
+                        class="card-img-top" alt="Surya Musk Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">Surya Musk</h5>
+                        <p class="card-text text-muted">Full Stack Developer</p>
+                        <p class="card-text small">
+                            Developing robust and scalable web applications.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-top">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-sm btn-outline-dark" title="Twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-dark" title="LinkedIn"><i
+                                    class="bi bi-linkedin"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-dark" title="Portfolio"><i
+                                    class="bi bi-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Designer Card with Social Links -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='250'%3E%3Crect fill='%23ffc107' width='100%25' height='100%25'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='black' font-size='48' font-weight='bold'%3EAD%3C/text%3E%3C/svg%3E"
+                        class="card-img-top" alt="Aditya Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">Aditya</h5>
+                        <p class="card-text text-muted">UI/UX Designer</p>
+                        <p class="card-text small">
+                            Creating intuitive and beautiful user experiences.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-top">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-sm btn-outline-dark" title="Twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-dark" title="LinkedIn"><i
+                                    class="bi bi-linkedin"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-dark" title="Portfolio"><i
+                                    class="bi bi-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <section class="container py-5">
+        <h2 class="mb-4">Typography</h2>
+
+        <h1 class="display-1">Display 1 Heading</h1>
+
+        <p class="lead">
+            This is a lead paragraph.
+        </p>
+
+        <p class="text-muted">
+            Muted text example.
+        </p>
+
+        <p class="fw-bold">
+            Bold Text Example
+        </p>
+
+        <p class="text-uppercase">
+            uppercase text
+        </p>
+
+        <p class="text-lowercase">
+            LOWERCASE TEXT
+        </p>
+
+        <p class="text-capitalize">
+            bootstrap learning project
+        </p>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="mb-4">Login Form with Floating Labels</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="p-4 border rounded shadow-sm">
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                        <label for="floatingEmail">Email address</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        Sign in
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container py-5" id="buttons">
+
+        <h2 class="mb-4">Buttons</h2>
+
+        <button class="btn btn-primary" title="Home">
+            <i class="bi bi-house-fill"></i>
+        </button>
+
+        <button class="btn btn-secondary" title="Profile">
+            <i class="bi bi-person-fill"></i>
+        </button>
+
+        <button class="btn btn-success" title="Check">
+            <i class="bi bi-check-circle-fill"></i>
+        </button>
+
+        <button class="btn btn-danger" title="Delete">
+            <i class="bi bi-trash-fill"></i>
+        </button>
+
+        <button class="btn btn-warning" title="Star">
+            <i class="bi bi-star-fill"></i>
+        </button>
+
+        <button class="btn btn-info" title="Info">
+            <i class="bi bi-info-circle-fill"></i>
+        </button>
+
+        <button class="btn btn-outline-primary" title="Search">
+            <i class="bi bi-search"></i>
+        </button>
+
+    </section>
+
+    <section class="container py-5">
+
+        <h2 class="mb-4">Button Groups</h2>
+
+        <h5 class="mb-3">Basic Button Group</h5>
+        <div class="btn-group mb-4" role="group" aria-label="Basic button group">
+            <button type="button" class="btn btn-outline-primary">Left</button>
+            <button type="button" class="btn btn-outline-primary">Middle</button>
+            <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+
+        <h5 class="mb-3">Button Group with Icons</h5>
+        <div class="btn-group mb-4" role="group" aria-label="Button group with icons">
+            <button type="button" class="btn btn-primary"><i class="bi bi-house"></i> Home</button>
+            <button type="button" class="btn btn-primary"><i class="bi bi-person"></i> Profile</button>
+            <button type="button" class="btn btn-primary"><i class="bi bi-gear"></i> Settings</button>
+        </div>
+
+        <h5 class="mb-3">Toggle Buttons with Checkboxes</h5>
+        <div class="btn-group mb-4" role="group" aria-label="Checkbox toggle buttons">
+            <input type="checkbox" class="btn-check" id="chkOption1">
+            <label class="btn btn-outline-success" for="chkOption1">Option 1</label>
+
+            <input type="checkbox" class="btn-check" id="chkOption2">
+            <label class="btn btn-outline-success" for="chkOption2">Option 2</label>
+
+            <input type="checkbox" class="btn-check" id="chkOption3">
+            <label class="btn btn-outline-success" for="chkOption3">Option 3</label>
+        </div>
+
+        <h5 class="mb-3">Toggle Buttons with Radio</h5>
+        <div class="btn-group mb-4" role="group" aria-label="Radio toggle buttons">
+            <input type="radio" class="btn-check" name="optionsRadio" id="radioOption1" checked>
+            <label class="btn btn-outline-warning" for="radioOption1">Small</label>
+
+            <input type="radio" class="btn-check" name="optionsRadio" id="radioOption2">
+            <label class="btn btn-outline-warning" for="radioOption2">Medium</label>
+
+            <input type="radio" class="btn-check" name="optionsRadio" id="radioOption3">
+            <label class="btn btn-outline-warning" for="radioOption3">Large</label>
+        </div>
+
+        <h5 class="mb-3">Vertical Button Group</h5>
+        <div class="btn-group-vertical mb-4" role="group" aria-label="Vertical button group">
+            <button type="button" class="btn btn-info">Top</button>
+            <button type="button" class="btn btn-info">Middle</button>
+            <button type="button" class="btn btn-info">Bottom</button>
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <h2 class="mb-4">Tabbed Navigation</h2>
+
+        <h5 class="mb-3">Nav Tabs</h5>
+        <ul class="nav nav-tabs mb-3" id="navTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-content"
+                    type="button" role="tab" aria-controls="home-content" aria-selected="true">
+                    Home
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-content"
+                    type="button" role="tab" aria-controls="profile-content" aria-selected="false">
+                    Profile
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-content"
+                    type="button" role="tab" aria-controls="contact-content" aria-selected="false">
+                    Contact
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content mb-4 p-3 border rounded" id="navTabsContent">
+            <div class="tab-pane fade show active" id="home-content" role="tabpanel" aria-labelledby="home-tab">
+                <h6>Home Tab Content</h6>
+                <p>Welcome to the home tab. This is the default active tab when the page loads.</p>
+            </div>
+            <div class="tab-pane fade" id="profile-content" role="tabpanel" aria-labelledby="profile-tab">
+                <h6>Profile Tab Content</h6>
+                <p>Here you can view and edit your profile information.</p>
+            </div>
+            <div class="tab-pane fade" id="contact-content" role="tabpanel" aria-labelledby="contact-tab">
+                <h6>Contact Tab Content</h6>
+                <p>Get in touch with us using the contact information provided here.</p>
+            </div>
+        </div>
+
+        <h5 class="mb-3">Nav Pills</h5>
+        <ul class="nav nav-pills mb-3" id="navPills" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="features-pill" data-bs-toggle="pill"
+                    data-bs-target="#features-content" type="button" role="tab" aria-controls="features-content"
+                    aria-selected="true">
+                    Features
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pricing-pill" data-bs-toggle="pill" data-bs-target="#pricing-content"
+                    type="button" role="tab" aria-controls="pricing-content" aria-selected="false">
+                    Pricing
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="support-pill" data-bs-toggle="pill" data-bs-target="#support-content"
+                    type="button" role="tab" aria-controls="support-content" aria-selected="false">
+                    Support
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content p-3 border rounded" id="navPillsContent">
+            <div class="tab-pane fade show active" id="features-content" role="tabpanel"
+                aria-labelledby="features-pill">
+                <h6>Features</h6>
+                <ul>
+                    <li>Responsive Design</li>
+                    <li>Bootstrap Integration</li>
+                    <li>Easy to Customize</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="pricing-content" role="tabpanel" aria-labelledby="pricing-pill">
+                <h6>Pricing Plans</h6>
+                <p><strong>Free:</strong> $0/month</p>
+                <p><strong>Pro:</strong> $9.99/month</p>
+                <p><strong>Enterprise:</strong> Custom pricing</p>
+            </div>
+            <div class="tab-pane fade" id="support-content" role="tabpanel" aria-labelledby="support-pill">
+                <h6>Support & Help</h6>
+                <p>Contact our support team at support@example.com or visit our help center.</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="container py-5" id="users">
+
+        <h2 class="mb-4">Media Object Layout</h2>
+
+        <div class="d-flex align-items-start border rounded p-4 shadow-sm">
+
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                class="me-4 rounded" alt="Profile Image">
+
+            <div>
+                <h4>Junead</h4>
+
+                <p class="text-muted">
+                    Senior Frontend Developer
+                </p>
+
+                <p>
+                    Junead specializes in creating responsive and user-friendly web
+                    applications using modern technologies such as Bootstrap,
+                    React, and JavaScript. He has over 5 years of experience in
+                    web development.
+                </p>
+
+                <button class="btn btn-primary">
+                    View Profile
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5 mt-4">
+
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+
+        <div class="row g-4">
+
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 h-100 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title mb-3">Basic</h3>
+                        <h4 class="text-primary mb-4">$9/mo</h4>
+
+                        <p class="mb-2">1 Website</p>
+                        <p class="mb-2">10 GB Storage</p>
+                        <p class="mb-4">Email Support</p>
+
+                        <button class="btn btn-outline-primary mt-3">
+                            Choose Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 h-100 shadow border-primary">
+                    <div class="card-body">
+                        <h3 class="card-title mb-3">Pro</h3>
+                        <h4 class="text-primary mb-4">$29/mo</h4>
+
+                        <p class="mb-2">10 Websites</p>
+                        <p class="mb-2">100 GB Storage</p>
+                        <p class="mb-4">Priority Support</p>
+
+                        <button class="btn btn-primary mt-3">
+                            Choose Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 h-100 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title mb-3">Enterprise</h3>
+                        <h4 class="text-primary mb-4">$99/mo</h4>
+
+                        <p class="mb-2">Unlimited Websites</p>
+                        <p class="mb-2">1 TB Storage</p>
+                        <p class="mb-4">24/7 Dedicated Support</p>
+
+                        <button class="btn btn-outline-primary mt-3">
+                            Choose Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5" id="dashboard">
+
+        <div class="bg-dark bg-gradient text-white p-4 rounded mb-4 text-center">
+            <h2>Dashboard</h2>
+            <p class="mb-0">Overview of your application statistics</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Total Users -->
+            <div class="col-md-3">
+                <div class="card bg-primary text-white p-4 text-center shadow">
+                    <h5>Total Users</h5>
+                    <h2>1,250</h2>
+                </div>
+            </div>
+
+            <!-- Revenue -->
+            <div class="col-md-3">
+                <div class="card bg-success text-white p-4 text-center shadow">
+                    <h5>Revenue</h5>
+                    <h2>$18,500</h2>
+                </div>
+            </div>
+
+            <!-- Pending Orders -->
+            <div class="col-md-3">
+                <div class="card bg-warning text-dark p-4 text-center shadow">
+                    <h5>Pending Orders</h5>
+                    <h2>75</h2>
+                </div>
+            </div>
+
+            <!-- Issues -->
+            <div class="col-md-3">
+                <div class="card bg-danger text-white p-4 text-center shadow">
+                    <h5>Issues</h5>
+                    <h2>12</h2>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <!-- Recent Activity -->
+            <div class="col-lg-8" id="#reports">
+                <div class="card p-4 shadow-sm">
+                    <h4 class="text-primary mb-3">Recent Activity</h4>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            New user registered
+                        </li>
+                        <li class="list-group-item">
+                            Order #1024 completed
+                        </li>
+                        <li class="list-group-item">
+                            Payment received from client
+                        </li>
+                        <li class="list-group-item">
+                            Support ticket resolved
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="col-lg-4">
+                <div class="card bg-light p-4 shadow-sm">
+                    <h4 class="text-success mb-3">Notifications</h4>
+
+                    <p class="text-muted">
+                        You have 5 unread messages.
+                    </p>
+
+                    <p class="text-danger">
+                        Server maintenance scheduled tonight.
+                    </p>
+
+                    <p class="text-warning">
+                        3 pending approvals require attention.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <h2 class="mb-4">Responsive Display Utilities</h2>
+
+        <!-- Hidden on all screens, visible from md and above -->
+        <div class="d-none d-md-block bg-primary text-white p-4 rounded mb-3">
+            This section is hidden on extra-small and small screens.
+            It becomes visible on medium (md) screens and larger.
+        </div>
+
+        <!-- Flex layout only on lg screens and above -->
+        <div class="d-none d-lg-flex bg-success text-white p-4 rounded gap-3">
+
+            <div class="p-3 bg-dark rounded">
+                Menu
+            </div>
+
+            <div class="p-3 bg-light text-dark rounded flex-grow-1">
+                Content Area
+            </div>
+
+        </div>
+
+        <!-- Always visible info -->
+        <div class="bg-warning text-dark p-4 rounded mt-3">
+            Resize the browser window to see how Bootstrap display utilities
+            show and hide content based on screen size.
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <h2 class="mb-4">Responsive Sidebar Layout</h2>
+
+        <div class="row">
+
+            <!-- Sidebar: Hidden on mobile, visible on md and above -->
+            <aside class="col-md-3 d-none d-md-block bg-dark text-white p-4">
+
+                <h4>Sidebar</h4>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#dashboard" class="nav-link text-white">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#users" class="nav-link text-white">Users</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#reports" class="nav-link text-white">Reports</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#settings" class="nav-link text-white">Settings</a>
+                    </li>
+                </ul>
+
+            </aside>
+
+            <!-- Main Content -->
+            <main class="col-12 col-md-9 bg-light p-4">
+
+                <h4>Main Content Area</h4>
+
+                <p>
+                    This content is visible on all screen sizes.
+                    The sidebar is hidden on mobile devices and appears
+                    only on tablets and larger screens.
+                </p>
+
+                <div class="alert alert-info">
+                    Resize the browser window to see the sidebar appear
+                    when the screen width reaches the medium breakpoint.
+                </div>
+
+            </main>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <h2 class="mb-4">Bootstrap Modal</h2>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+            Open Modal
+
+        </button>
+
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Bootstrap Modal
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    This is a modal popup created using Bootstrap 5.
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+
+                        Close
+
+                    </button>
+
+                    <button type="button" class="btn btn-primary">
+
+                        Save Changes
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="container py-5">
+
+        <h2 class="mb-4">Bootstrap Accordion</h2>
+
+        <div class="accordion" id="faqAccordion">
+
+            <!-- Item 1 -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne">
+
+                        What is Bootstrap?
+
+                    </button>
+
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Bootstrap is a popular CSS framework used to build responsive websites quickly.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo">
+
+                        Why use Bootstrap?
+
+                    </button>
+
+                </h2>
+
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        It provides pre-built components, responsive grids, and utility classes.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree">
+
+                        Is Bootstrap Mobile Friendly?
+
+                    </button>
+
+                </h2>
+
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Yes, Bootstrap follows a mobile-first approach and is fully responsive.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+
+        <div class="container">
+            <p class="mb-2">
+                © 2025 Bootstrap Showcase | All Rights Reserved
+            </p>
+
+            <div class="d-flex justify-content-center gap-3">
+
+                <a href="#" class="text-white fs-4">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="#" class="text-white fs-4">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+
+                <a href="#" class="text-white fs-4">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#" class="text-white fs-4">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+
+                <a href="#" class="text-white fs-4">
+                    <i class="bi bi-github"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
